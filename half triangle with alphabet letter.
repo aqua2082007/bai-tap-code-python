@@ -1,0 +1,17 @@
+#half triangle with alphabet letter.
+def intamgiac(n):
+    s = 1
+    while (s <= n):
+        t = ""
+        for i in range(s):
+            t += chr(64 + s)
+        print(t.rjust(n))
+        s+= 1
+    
+
+n = int(input("nhap vao chieu cao cua thap: "))
+if n > 0 and n < 27:
+    intamgiac(n)
+else:
+    print("nhập lại n")
+
