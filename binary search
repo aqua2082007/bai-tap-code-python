@@ -17,7 +17,6 @@ kotimthay = -1
 while low <= high:
     mid = (low + high) // 2
     if x[mid] == key:
-        print(mid)
         kotimthay = mid
         break
     elif x[mid] < key:
