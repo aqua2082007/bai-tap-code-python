@@ -1,0 +1,34 @@
+key = int(input("nhap vao key: "))
+print("nhap vao danh sach: " , end="")
+x = list(map(int, input().split()))
+#thuat toan sorting
+x.sort()
+
+# thuat toan binary search
+
+#set low and high for list , set mid after that  
+low = 0
+high = len(x) - 1
+mid = (low + high) // 2
+kotimthay = -1
+
+
+# vòng lặp tìm key
+while low <= high:
+    mid = (low + high) // 2
+    if x[mid] == key:
+        print(mid)
+        kotimthay = mid
+        break
+    elif x[mid] < key:
+        low = mid + 1
+    else:
+        high = mid - 1
+
+if kotimthay != -1:
+    print(f"key o vi tri: {kotimthay}")
+else: # bằng -1 
+    print("ko tim thay")
+
+    
+
